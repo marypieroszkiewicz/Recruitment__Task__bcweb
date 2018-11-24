@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const selector = '.plus';
     const elems = Array.from( document.querySelectorAll(selector));
-    const navigation = document.querySelector('nav');
+    const navigation = document.querySelector('.nav__list');
 
     function makeActive(evt) {
       const target = evt.target;
@@ -36,9 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if ( !target || !target.matches(selector)) {
           return;
         }
-      
+        
         elems.forEach(elem => elem.classList.remove('active'));
         evt.target.classList.add('active');
+        evt.preventDefault();
     }
 
     navigation.addEventListener('mousedown', makeActive);
