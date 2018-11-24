@@ -348,7 +348,7 @@ main {
   cursor: pointer;
 }
 
-.box > a {
+.box > .box__link {
   padding: 0 1.813rem;
   height: 100%;
   width: 100%;
@@ -359,6 +359,10 @@ main {
 }
 
 .box:hover {
+  background: rgba(255,255,255, 0.2);
+}
+
+.box__link.active__box {
   background: rgba(255,255,255, 0.2);
 }
 
